@@ -11,4 +11,5 @@ access_grant: insightsiQ {
 
 explore: oracleebsap_hold_codes{
   label: "Test TLDD"
+  required_access_grants: [insightsiQ]
 }
