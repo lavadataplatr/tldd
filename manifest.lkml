@@ -2,11 +2,13 @@ project_name: "tldd"
 
 application: tldd {
   label: "tldd"
-  url: "https://storage.googleapis.com/tldd-frontend/bundle.js"
+  url: "https://storage.googleapis.com/tldd_api_dashboards/bundle.js"
+  # replace {{ pdf_bucket }} with the name of your GCS bucket
   entitlements: {
     use_clipboard: yes
     use_form_submit: yes
-    external_api_urls: ["https://vertex-dashboards-2w54ohrt4q-uc.a.run.app", "https://localhost:8080"]
-    global_user_attributes: ["looker_hackathon_vertexai_tldd_api"]
+    # Find the Cloud Run URL in GCP Console, then add it here
+    external_api_urls: ["https://console.cloud.google.com/storage/browser/tldd_api_dashboards"]
+    global_user_attributes: ["https://console.cloud.google.com/storage/browser/tldd_api_dashboards"]
   }
 }
